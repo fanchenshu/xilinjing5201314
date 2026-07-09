@@ -1,0 +1,24 @@
+server:
+  port: 8084
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/test——db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2b8
+    username: root
+    password: xilinjing520
+    hikari:
+      maximum-pool-size: 100
+      minimum-idle: 10
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    # 下面的 properties 全部删除，不要有任何缓存配置
